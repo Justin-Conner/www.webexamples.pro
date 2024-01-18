@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+
+    nav {
+        background-color: yellow;
+        height: 50px;
+        padding: 1px;
+    }
+
+        nav ul {
+            Float: center;
+        }
+
+            nav ul li {
+                width: 150px;
+                height: 20px;
+                float: left;
+                text-align: center;
+            }
+
+    li a {
+        text-decoration: none;
+        color: black;
+        line-height: 45px;
+        font-size: 15;
+        display: block;
+    }
+
+        li a:hover {
+            background-color: blue;
+            color: white;
+        }
+
+    h1 {
+        text-align: center;
+        Float: top;
+        color: black;
+    }
+
+
+
+    p {
+        text-align: center;
+        color: blue;
+    }
+
+    body {
+        text-align: center;
+        background: blue;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: white;
+        font-family: Helvetica;
+    }
+
+    div {
+        background-color: black;
+    }
+
+    input {
+        Float: left;
+    }
+    #myCanvas{
+      position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  z-index: 9999;
+    }
+    #glow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+      
+      .glow-circle {
+        position: absolute;
+        border-radius: 50%;
+        background-color: transparent;
+      }
+      body {
+  background-color: black;
+}
+#wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* set the height to fill the viewport */
+}
+
+ </style> 
+
+  <head>
+       <title>Hire Me</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<script type="text/javascript" src="bubbles3.js"></script>
+<script type="text/javascript" src="bubbles2.js"></script>
+<script type="text/javascript" src="bubbles.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
+
+
+  </head>
+  <body><button onclick="changeColor()">Repaint!</button> 
+    <script>
+        function getRandomColor(){
+          let letters = '0123456789ABCDEF';
+          let color = '#';
+          for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+          }
+          return color;
+        }
+        function changeColor(){
+          let newColor = getRandomColor();
+          document.body.style.backgroundColor = newColor;
+        }
+    </script>
+      
+       <div class = "row">
+        <div class = "col-sm-6">
+    </div>
+	
+
+    <div id="glow"> <div id="wrapper">  <canvas id="myCanvas"> </div> <script>
+       
+        
+    </script></canvas>
+    <script type="text/javascript" src="bubbles.js"></script>
+    <script type="text/javascript" src="main.js"></script></div>
+
+    <script>
+      const glowContainer = document.getElementById('glow');
+      const colors = [
+        [255, 0, 0],
+        [0, 255, 0],
+        [0, 0, 255]
+      ];
+
+      class GlowCircle {
+        constructor(color) {
+          this.color = color;
+          this.radius = 20 + Math.random() * 30;
+          this.x = Math.random() * glowContainer.offsetWidth;
+          this.y = -this.radius;
+          this.speed = 1 + Math.random() * 2;
+          this.element = document.createElement('div');
+          this.element.classList.add('glow-circle');
+          this.element.style.backgroundColor = `rgba(${color[0]}, ${color[1]}, ${color[2]}, 0.8)`;
+          this.element.style.width = `${this.radius}px`;
+          this.element.style.height = `${this.radius}px`;
+          this.element.style.left = `${this.x}px`;
+          this.element.style.top = `${this.y}px`;
+          glowContainer.appendChild(this.element);
+        }
+
+        update() {
+          this.y += this.speed;
+          this.element.style.top = `${this.y}px`;
+          if (this.y - this.radius > glowContainer.offsetHeight) {
+            this.destroy();
+          }
+        }
+
+        destroy() {
+          this.element.remove();
+        }
+      }
+
+      function createGlowCircle() {
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const glowCircle = new GlowCircle(color);
+        function animate() {
+          glowCircle.update();
+          requestAnimationFrame(animate);
+        }
+        animate();
+      }
+
+      setInterval(createGlowCircle, 30);
+    </script>
+	
+     <!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+ 
+  </body>
+</html>
