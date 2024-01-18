@@ -1,4 +1,3 @@
-
 var currentSlide = 1;
 var isPaused = false;
 
@@ -48,5 +47,3 @@ function copyContent() {
 
 setInterval(nextSlide, 2000);
 showSlide(currentSlide);
-
-

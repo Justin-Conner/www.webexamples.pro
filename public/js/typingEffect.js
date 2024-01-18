@@ -1,5 +1,4 @@
 
-
 /*document.addEventListener("DOMContentLoaded", function() {
     const sentences = [
         "Hello World. ",
@@ -95,5 +94,3 @@ document.addEventListener("DOMContentLoaded", function() {
     // Start typing effect
     typeSentence(0);
 });
-
-
