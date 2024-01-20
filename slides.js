@@ -46,4 +46,42 @@ function copyContent() {
 }
 
 setInterval(nextSlide, 2000);
-showSlide(currentSlide);
+
+// Update this to match the ID of your container
+var slidesContainer = document.getElementById('slidesContainer');
+
+// Function to create a square and append it to the container
+function createSquare(imageSrc, content) {
+  var square = document.createElement('div');
+  square.className = 'square';
+
+  var link = document.createElement('a');
+  link.className = 'btn';
+  link.href = '#'; // Update this to the correct link
+
+  var imageContainer = document.createElement('div');
+  imageContainer.className = 'image-container';
+
+  var image = document.createElement('img');
+  image.style.width = '250px';
+  image.style.height = 'auto';
+  image.style.backgroundColor = 'transparent';
+  image.src = imageSrc;
+  image.alt = 'Sample Image';
+
+  var squareContent = document.createElement('div');
+  squareContent.className = 'squareContent';
+  squareContent.textContent = content;
+
+  slidesContainer.appendChild(square);
+  square.appendChild(link);
+  link.appendChild(imageContainer);
+  imageContainer.appendChild(image);
+  square.appendChild(squareContent);
+}
+
+// Call createSquare for each square you want to add
+createSquare('./images/HTML5_badge.png', 'HTML5');
+createSquare('./images/css.png', 'CSS');
+createSquare('./images/Custom components.jpg', 'Custom Components');
+createSquare('./images/JavaScript.png', 'JavaScript');
