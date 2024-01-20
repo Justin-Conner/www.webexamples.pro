@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <!-- Open Graph meta tags for better link preview -->
+    <!-- Open Graph meta tags for better link preview.-->
     <meta property="og:title" content="full stack web developer">
     <meta property="og:description" content="website devlopment and design">
     <meta property="og:image" content="https://media.licdn.com/dms/image/D4E03AQHYsP-m0Cql_g/profile-displayphoto-shrink_200_200/0/1686157463772?e=1710374400&v=beta&t=6lLr_ZvLeqY9qxI55ssYU_KCptPebCm1u_81C2HBmuU">
@@ -12,8 +12,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hire Me</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" type="text/css" href="./css/button.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="stylesheet" type="text/css" href="./button.css">
 
     <style>
 #typing-container {
@@ -34,7 +34,7 @@
 <div class="nav-item">
     <div class="upwork-image-container" id="upwork-container">
         <a href="https://www.upwork.com/freelancers/~01698ada43fe6d7b4e" target="_blank">
-            <img id="upwork-logo" style="width: 50px; height: 50px; background-color: transparent;" src="./images/UpworkLogo.jpg" alt="Upwork Logo">
+            <img id="upwork-logo" style="width: 50px; height: 50px; background-color: transparent;" src="/images/UpworkLogo.jpg" alt="Upwork Logo">
         </a>
     </div>
 </div>
@@ -46,12 +46,12 @@
   </div>
   <div class="nav-item">
     <a href="https://github.com/Justin-Conner" target="_blank">
-        <img style="height: 44px; border-radius: 5px; border: 2px solid black;" src="/images/GitHub.png">
+      <img style="height: 44px; border-radius: 5px; border: 2px solid black; background-color: white;" src="./images/GitHub.png" alt="GitHub Logo">
     </a>
 </div>
   <div class="nav-item">
     <a href="https://test-ao-5f6993867cb4.herokuapp.com" target="_blank">
-        <img  style="width: 50px; height: 50px; background-color: transparent;" src="/images/Phoenix.jpg" alt="OLP Logo">
+        <img  style="width: 50px; height: 50px; background-color: transparent;" src="./images/Phoenix.jpg" alt="OLP Logo">
     </a>
 </div>
   <div class="nav-item">
