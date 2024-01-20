@@ -34,7 +34,7 @@
 <div class="nav-item">
     <div class="upwork-image-container" id="upwork-container">
         <a href="https://www.upwork.com/freelancers/~01698ada43fe6d7b4e" target="_blank">
-            <img id="upwork-logo" style="width: 50px; height: 50px; background-color: transparent;" src="/images/UpworkLogo.jpg" alt="Upwork Logo">
+            <img id="upwork-logo" style="width: 50px; height: 50px; background-color: transparent;" src="./images/UpworkLogo.jpg" alt="Upwork Logo">
         </a>
     </div>
 </div>
