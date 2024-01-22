@@ -14,7 +14,7 @@
     <title>Hire Me</title>
     <link rel="stylesheet" type="text/css" href="./styles.css">
     <link rel="stylesheet" type="text/css" href="./button.css">
-    <link rel="stylesheet" type="text/css" href="./button.css">
+    <link rel="stylesheet" type="text/css" href="./jumbotron.css">
 
 
 
@@ -56,23 +56,25 @@
 
 </div>
 <style>    iframe {
-  width: 100%; /* Make the iframe fill the container */
+  width: 1825px; /* Make the iframe fill the container */
   height: 400px; /* Set the height to 100% of the viewport height */
   border: none; /* Remove iframe border */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 10px box shadow */
+background-color: black;
 }</style>
 
 
 <div class="jumbotron">
      
             <div id="typing-container"></div>
+                 <!-- Resume button and Upwork image container -->
+    <div class="button-container">
+      <div class="resume-container">
+      <button class="animated-buttonRad" onclick="downloadResume()"><div id="btn-cover">Download Resume</div></button>
+  </div>
             <iframe src="./web.html" title="Web Content"></iframe>
 
-
-     <!-- Resume button and Upwork image container -->
-    <div class="button-container">
-        <div class="resume-container">
-        <button class="animated-buttonRad" onclick="downloadResume()"><div id="btn-cover">Download Resume</div></button>
-    </div>
 </div>
     
 
