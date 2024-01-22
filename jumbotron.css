@@ -1,0 +1,7 @@
+.jumbotron {
+    background-image: url('web.html'); /* Replace 'path/to/web.html' with the actual path to your image */
+    background-size: cover; /* Adjust background size as needed */
+    background-position: center; /* Center the background image */
+    color: white; /* Set text color to white for better visibility */
+    padding: 20px; /* Add some padding for better readability */
+  }
