@@ -13,10 +13,10 @@
   }*/
 
   .jumbotron {
-    background-image: url('web.html'); /* Replace 'path/to/web.html' with the actual path to your image */
+    /* Remove the background-image property */
     background-size: cover; /* Adjust background size as needed */
     background-position: center; /* Center the background image */
-    color: white; /* Set text color to white for better visibility */
+    background-color: rgb(134, 134, 134); /* Set text color to white for better visibility */
     padding: 20px; /* Add some padding for better readability */
     margin: 25px;
     border-radius: 10px;
@@ -25,5 +25,25 @@
     align-items: center;
     justify-content: center;
     width: 95%;
-  }
+
+    /* Animation properties */
+    animation-name: example; /* Name of the keyframes animation */
+    animation-duration: 5s; /* Duration of the animation */
+    animation-timing-function: ease-in-out; /* Timing function for the animation */
+    animation-iteration-count: infinite; /* Make the animation repeat infinitely */
+}
+
+/* Define keyframes for the animation */
+@keyframes example {
+    0% {
+        background-color: rgb(134, 134, 134); /* Initial background color */
+    }
+    50% {
+        background-color: rgb(200, 200, 200); /* Intermediate background color */
+    }
+    100% {
+        background-color: rgb(134, 134, 134); /* Final background color */
+    }
+}
+
   
