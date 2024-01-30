@@ -4,11 +4,15 @@ body {
     width: 100%;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    
 }
+<<<<<<< HEAD
 .navbar{
     width: 100%;
 
+=======
+
+.navbar {
+>>>>>>> master
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -17,18 +21,19 @@ body {
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
-.button-container{
+
+.button-container {
     display: flex;
     justify-content: center;
     flex-direction: column; /* Make the flex container a column */
     align-items: center; /* Center items along the cross-axis (vertically) */
-
 }
+
 .footer {
     display: flex;
     width: 100%;
     justify-content: center;
-    flex-direction: row; /* Make the flex container a column */
+    flex-direction: row; /* Make the flex container a row */
     align-items: center; /* Center items along the cross-axis (vertically) */
     gap: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -46,19 +51,15 @@ body {
     position: relative; /* Use position relative to control the stacking context */
 }
 
-
-
-
-
 #typing-container {
     align-items: center;
-
     font-size: 4em;
-    width: 1200;
-    height: 200px;
+    width: 100%; /* Adjust to full width */
+    max-width: 1200px; /* Limit width for readability */
+    height: auto;
     word-wrap: break-word;
     padding: 40px;
-    margin: 60px;
+    margin: 60px auto; /* Center horizontally */
     font-family: Arial, sans-serif;
     font-size: 24px;
     white-space: nowrap;
@@ -68,12 +69,7 @@ body {
     color: white;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 10px box shadow */
-
 }
-
-
-
-
 
 .container {
     display: grid;
@@ -86,17 +82,19 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-
-
-
 /* Add a media query for mobile devices */
 @media only screen and (max-width: 600px) {
     .container {
         grid-template-rows: auto; /* Reset to default behavior for mobile */
         grid-template-columns: 1fr;
     }
+
+    #typing-container {
+        font-size: 2em; /* Decrease font size for mobile devices */
+    }
 }
 
+<<<<<<< HEAD
 
 /*.image-container {
     width: 100%;
@@ -104,10 +102,20 @@ body {
     background-color: transparent;
     padding: 20px;
 }*/
+=======
+>>>>>>> master
 .image-container {
     width: 100%; /* Ensure the container takes up the full width */
     display: flex;
     justify-content: center; /* Center the image horizontally */
+<<<<<<< HEAD
+=======
+}
+
+.image-container img {
+    max-width: 100%; /* Ensure the image does not exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+>>>>>>> master
 }
 
 .image-container img {
@@ -117,7 +125,8 @@ body {
 
 
 .square {
-    width: 300px;
+    width: 100%; /* Adjust to full width */
+    max-width: 300px; /* Limit width for readability */
     height: auto;
     background-color: rgba(255, 255, 255, 10);
     padding: 20px;
@@ -133,5 +142,3 @@ body {
     padding: 20px;
     font-size: 24px;
 }
-
-
