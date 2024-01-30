@@ -9,6 +9,7 @@
 
     transition: transform 0.5s ease; /* Smooth transition for scrolling */
     background-color: white;
+
 }
 
 .carousel-item {
@@ -26,13 +27,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 20px;
 }
 
 .image-container img {
-    width: 100%;
-    height: auto;
+    max-width: 100%; /* Ensures the image does not exceed the width of its container */
+    max-height: 100%; /* Ensures the image does not exceed the height of its container */
+    display: block; /* Ensures that the image behaves as a block element */
+    margin: auto; /* Centers the image horizontally within its container */
 }
+
 
 .squareContent {
     margin-top: 10px;

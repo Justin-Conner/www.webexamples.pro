@@ -4,13 +4,13 @@ const items = [
     { src: 'images/css.png', alt: 'Image 3' },
     { src: 'images/NodeLogo.jpg', alt: 'Image 4' },
     { src: 'images/React logo.png', alt: 'Image 5' },
-    { src: 'images/MongoDb.jpg', alt: 'Image 6' },
+    { src: 'images/Mongo.jpg', alt: 'Image 6' },
     { src: 'images/SSMS.jpg', alt: 'Image 7' },
     { src: 'images/Etc.jpg', alt: 'Image 8' },
     { src: 'images/MySQL.png', alt: 'Image 9' },
     { src: 'images/Oracle db.jpg', alt: 'Image 10' },
     { src: 'images/Python logo.jpg', alt: 'Image 11' },
-    { src: 'images/Threejs.jpg', alt: 'Image 12' },
+    { src: 'images/ThreeJs.jpg', alt: 'Image 12' },
     { src: 'images/Sql logo.png', alt: 'Image 12' },
 
     // Add more items as needed
@@ -49,8 +49,8 @@ function createCarouselItem(itemData) {
     imageContainer.classList.add('image-container');
 
     const image = document.createElement('img');
-    image.style.width = '225px';
-    image.style.height = 'auto';
+    image.style.width = '100%';
+    image.style.height = '100%';
     image.style.backgroundColor = 'transparent';
     image.src = itemData.src;
     image.alt = itemData.alt;

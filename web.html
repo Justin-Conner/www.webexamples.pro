@@ -1,42 +1,35 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
     canvas {
       display: block;
       margin: auto;
       background-color: black;
     }
+    #bouncingCanvas {
+      width: 100%;
+      height: 100%;
+    }
   </style>
   <title>Bouncing Circles Animation</title>
 </head>
 <body>
-  <style>
-    #bouncingCanvas {
-        width: 100%; /* Make the canvas fill the container */
-        max-width: 100vw; /* Limit the maximum width to the viewport width */
-        height: auto; /* Automatically adjust the height */
-        max-height: 70vh; /* Limit the maximum height to 70% of the viewport height */
-        display: block; /* Ensure the canvas behaves as a block element */
-        margin: 0 auto; /* Center the canvas horizontally */
-        border: 2px solid black; /* Add a border for better visibility */
-        border-radius: 10px; /* Add border radius for rounded corners */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add box shadow for depth */
-        background-color: black; /* Set background color */
-    }
-</style>
-
-  <canvas id="bouncingCanvas" width="1800" height="350"></canvas>
+  <canvas id="bouncingCanvas"></canvas>
 
   <script>
     const canvas = document.getElementById('bouncingCanvas');
     const ctx = canvas.getContext('2d');
 
-    const numberOfCircles = 12; // Change the number of circles here
+    const numberOfCircles = 12;
     const circles = [];
     let colorIndex = 0;
 
@@ -46,15 +39,13 @@
       return colors[colorIndex];
     }
 
-    // Adjust initial x position and spacing for better visibility
     for (let i = 0; i < numberOfCircles; i++) {
       circles.push({
-        x: 50 + i * 70, // Adjust initial x position for each circle
-        y: 100,
+        x: Math.random() * (canvas.width - 20) + 10, // Random initial x position within canvas width
+        y: Math.random() * (canvas.height - 20) + 10, // Random initial y position within canvas height
         radius: 10,
-        angle: Math.random() * 20 + 240 + i * 20, // Adjust initial angle for each circle
+        angle: Math.random() * 360, // Random initial angle
         speed: 2,
-        bounceAngle: Math.random() * 20 + 240 + i * 20, // Unique bounce angle for each circle
       });
     }
 
@@ -66,6 +57,45 @@
       ctx.closePath();
     }
 
+    function updateCircle(circle) {
+      const radians = (circle.angle * Math.PI) / 180;
+      circle.x += circle.speed * Math.cos(radians);
+      circle.y += circle.speed * Math.sin(radians);
+
+      if (circle.x - circle.radius < 0 || circle.x + circle.radius > canvas.width) {
+        circle.angle = 180 - circle.angle;
+      }
+
+      if (circle.y - circle.radius < 0 || circle.y + circle.radius > canvas.height) {
+        circle.angle = 360 - circle.angle;
+      }
+    }
+
+    function animate() {
+      canvas.width = window.innerWidth; // Adjust canvas width based on window size
+      canvas.height = window.innerHeight; // Adjust canvas height based on window size
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (const circle of circles) {
+        drawCircle(circle);
+      }
+
+      for (let i = 0; i < circles.length; i++) {
+        for (let j = 0; j < circles.length; j++) {
+          if (i !== j) {
+            drawLine({ x: circles[i].x, y: circles[i].y }, { x: circles[j].x, y: circles[j].y });
+          }
+        }
+      }
+
+      for (const circle of circles) {
+        updateCircle(circle);
+      }
+
+      requestAnimationFrame(animate);
+    }
+
     function drawLine(point1, point2) {
       ctx.beginPath();
       ctx.moveTo(point1.x, point1.y);
@@ -75,49 +105,7 @@
       ctx.closePath();
     }
 
-    function updateCircle(circle) {
-      const radians = (circle.angle * Math.PI) / 180; // Convert angle to radians
-      circle.x += circle.speed * Math.cos(radians);
-      circle.y += circle.speed * Math.sin(radians);
-
-      // Check for collisions with the walls
-      if (circle.x - circle.radius < 0 || circle.x + circle.radius > canvas.width) {
-        circle.angle = 180 - circle.angle; // Reflect angle for horizontal walls
-      }
-
-      if (circle.y - circle.radius < 0 || circle.y + circle.radius > canvas.height) {
-        circle.angle = 360 - circle.angle; // Reflect angle for vertical walls
-      }
-    }
-
-    function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      for (const circle of circles) {
-        drawCircle(circle);
-      }
-
-      // Draw lines connecting a single circle to each other circle
-      for (let i = 0; i < circles.length; i++) {
-        for (let j = 0; j < circles.length; j++) {
-          if (i !== j) {
-            drawLine({ x: circles[i].x, y: circles[i].y }, { x: circles[j].x, y: circles[j].y });
-          }
-        }
-      }
-
-      // Update and animate each circle
-      for (const circle of circles) {
-        updateCircle(circle);
-      }
-
-      requestAnimationFrame(animate);
-    }
-
     animate();
   </script>
 </body>
 </html>
-
-
-
