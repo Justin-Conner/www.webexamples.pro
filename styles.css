@@ -95,12 +95,23 @@ body {
 }
 
 
-.image-container {
+/*.image-container {
     width: 100%;
     height: auto;
     background-color: transparent;
     padding: 20px;
+}*/
+.image-container {
+    width: 100%; /* Ensure the container takes up the full width */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
 }
+
+.image-container img {
+    max-width: 100%; /* Ensure the image does not exceed the container width */
+    height: auto; /* Maintain aspect ratio */
+}
+
 
 .square {
     width: 300px;
