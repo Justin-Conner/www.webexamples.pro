@@ -23,11 +23,13 @@ body {
 }
 .footer {
     display: flex;
+    width: 100%;
     justify-content: center;
     flex-direction: row; /* Make the flex container a column */
     align-items: center; /* Center items along the cross-axis (vertically) */
     gap: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin: 0;
 }
 
 .span {
@@ -38,9 +40,7 @@ body {
     flex-direction: column;
     background-color: white;
     align-items: center;
-    z-index: -1; /* Add a higher z-index to keep it above other elements */
     position: relative; /* Use position relative to control the stacking context */
-    padding: 20px; /* Add padding to avoid covering up other elements */
 }
 
 
