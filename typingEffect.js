@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", function() {
         "Welcome to my portfolio website!",
         "Download my resume.",
         "Check out my projects.",
-        "Schedule an interview."
+        "Schedule an interview.",
+        "Hire me."
     ];
 
     const typingSpeed = 100;

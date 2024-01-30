@@ -1,0 +1,29 @@
+/*.jumbotron {
+    background-image: url('web.html'); /* Replace 'path/to/web.html' with the actual path to your image 
+    background-size: cover;
+    background-position: center; 
+    padding: 20px; 
+    margin: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+  }*/
+
+  .jumbotron {
+    background-image: url('web.html'); /* Replace 'path/to/web.html' with the actual path to your image */
+    background-size: cover; /* Adjust background size as needed */
+    background-position: center; /* Center the background image */
+    color: white; /* Set text color to white for better visibility */
+    padding: 20px; /* Add some padding for better readability */
+    margin: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Set the flex direction to column */
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+  }
+  

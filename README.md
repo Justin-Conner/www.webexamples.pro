@@ -14,157 +14,6 @@
     <title>Hire Me</title>
     <link rel="stylesheet" type="text/css" href="./styles.css">
     <link rel="stylesheet" type="text/css" href="./button.css">
-    <link rel="stylesheet" type="text/css" href="./jumbotron.css">
-    <link rel="stylesheet" type="text/css" href="./style.css">
-
-
-
-
-</head>
-
-<body>
-  <div class="navbar">
-    
-<div class="nav-item">
-    <div class="upwork-image-container" id="upwork-container">
-        <a href="https://www.upwork.com/freelancers/~01698ada43fe6d7b4e" target="_blank">
-            <img id="upwork-logo" style="width: 50px; height: 50px; background-color: transparent;" src="./images/UpworkLogo.jpg" alt="Upwork Logo">
-        </a>
-    </div>
-</div>
-
-    <div class="nav-item">
-      <a href="https://www.linkedin.com/in/justin-conner-816337224/" target="_blank">
-          <img style="height: 54px; width: 54px;" src="./images/LinkedInSquare.jpg" alt="LinkedIn Logo">
-      </a>
-  </div>
-  <div class="nav-item">
-    <a href="https://github.com/Justin-Conner" target="_blank">
-      <img style="height: 44px; border-radius: 5px; border: 2px solid black; background-color: white;" src="./images/GitHub.png" alt="GitHub Logo">
-    </a>
-</div>
-  <div class="nav-item">
-    <a href="https://test-ao-5f6993867cb4.herokuapp.com" target="_blank">
-        <img  style="width: 50px; height: 50px; background-color: transparent;" src="./images/Phoenix.jpg" alt="OLP Logo">
-    </a>
-</div>
-  <div class="nav-item">
-    <a href="https://calendly.com/justin_conner/interview" target="_blank">
-        <img style="height: 54px; width: 54px; border-radius: 5px;" src="./images/Cal.png">
-    </a>
-</div>
-
-
-
-</div>
-<style>    iframe {
-  width: 100%; /* Make the iframe fill the container */
-  height: 400px; /* Set the height to 100% of the viewport height */
-  border: none; /* Remove iframe border */
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 10px box shadow */
-background-color: black;
-}</style>
-
-
-<div class="jumbotron">
-     
-            <div id="typing-container"></div>
-                 <!-- Resume button and Upwork image container -->
-    <div class="button-container">
-      <div class="resume-container">
-      <button class="animated-buttonRad" onclick="downloadResume()"><div id="btn-cover">Download Resume</div></button>
-  </div>
-            <iframe src="./web.html" title="Web Content"></iframe>
-
-</div>
-    
-
-                                                   
-</div> <!--end jumbotron-->
-
- 
-
-
-<!--Start Skills Carousel-->
-<div class="span"><h1>Skills</h1></div>
-
-    <div class="carousel-container">
-        <div class="carousel-wrapper" id="carouselWrapper">
-            <!-- Carousel items will be dynamically generated here -->
-        </div>
-
-</div><!--end container-->
-
-  
-       
-
-
-	<!--<script src="grid.js"></script>-->
-    <script src="./typingEffect.js"></script>
-    <script src="./download.js"></script>
-    <script src="./carosel.js"></script>
-
-
-</body>
-<div class="span"><p>&copy; Ohm Lotus Phoenix 2019-2023</p> </div>
-                                                          <!--BEGIN FOOTER-->
-<footer class="footer">
-
-
-      
-      <a href="#" style= "color: white">Back to top</a>
-      <div class="nav-item">
-        <div class="upwork-image-container" id="upwork-container">
-            <a href="https://www.upwork.com/freelancers/~01698ada43fe6d7b4e" target="_blank">
-                <img id="upwork-logo" style="width: 50px; height: 50px; background-color: transparent; border-radius: 5px;" src="./images/UpworkLogo.jpg" alt="Upwork Logo">
-            </a>
-        </div>
-    </div>
-    
-    <div class="nav-item">
-      <a href="https://www.linkedin.com/in/justin-conner-816337224/" target="_blank">
-          <img style="height: 54px; width: 54px;" src="./images/LinkedInSquare.jpg" alt="LinkedIn Logo">
-      </a>
-  </div>
-      <div class="nav-item">
-        <a href="https://github.com/Justin-Conner" target="_blank">
-            <img style="height: 44px; border-radius: 5px; border: 2px solid black; background-color: white;" src="./images/GitHub.png">
-        </a>
-    </div>
-      <div class="nav-item">
-        <a href="https://test-ao-5f6993867cb4.herokuapp.com" target="_blank">
-            <img  style="width: 50px; height: 50px; background-color: transparent; border-radius: 5px;" src="./images/Phoenix.jpg" alt="OLP Logo">
-        </a>
-    </div>
-      <div class="nav-item">
-        <a href="https://calendly.com/justin_conner/interview" target="_blank">
-            <img style="height: 54px; width: 54px; border-radius: 5px;" src="./images/Cal.png">
-        </a>
-    </div>
-  </div>
-
-</footer>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-
-</html>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <!-- Open Graph meta tags for better link preview -->
-    <meta property="og:title" content="full stack web developer">
-    <meta property="og:description" content="website devlopment and design">
-    <meta property="og:image" content="https://media.licdn.com/dms/image/D4E03AQHYsP-m0Cql_g/profile-displayphoto-shrink_200_200/0/1686157463772?e=1710374400&v=beta&t=6lLr_ZvLeqY9qxI55ssYU_KCptPebCm1u_81C2HBmuU">
-    <meta property="og:url" content="https://webexamples.pro/">
-    <meta property="og:type" content="website">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hire Me</title>
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" type="text/css" href="./css/button.css">
 
     <style>
 #typing-container {
@@ -197,12 +46,12 @@ background-color: black;
   </div>
   <div class="nav-item">
     <a href="https://github.com/Justin-Conner" target="_blank">
-        <img style="height: 44px; border-radius: 5px; border: 2px solid black;" src="/images/GitHub.png">
+      <img style="height: 44px; border-radius: 5px; border: 2px solid black; background-color: white;" src="./images/GitHub.png" alt="GitHub Logo">
     </a>
 </div>
   <div class="nav-item">
     <a href="https://test-ao-5f6993867cb4.herokuapp.com" target="_blank">
-        <img  style="width: 50px; height: 50px; background-color: transparent;" src="/images/Phoenix.jpg" alt="OLP Logo">
+        <img  style="width: 50px; height: 50px; background-color: transparent;" src="./images/Phoenix.jpg" alt="OLP Logo">
     </a>
 </div>
   <div class="nav-item">
@@ -458,7 +307,7 @@ background-color: black;
     
         <div class="nav-item">
           <a href="https://www.linkedin.com/in/justin-conner-816337224/" target="_blank">
-              <img style="height: 54px; width: 54px; border-radius: 5px;" src="/images/linkedInSquare.jpg">
+              <img style="height: 54px; width: 54px; border-radius: 5px;" src="/images/linkedinSquare.jpg">
           </a>
       </div>
       <div class="nav-item">
