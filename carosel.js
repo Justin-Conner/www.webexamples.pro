@@ -2,7 +2,7 @@ const items = [
     { src: 'images/Angular.jpg', alt: 'Image 1' },
     { src: 'images/HTML5_badge.png', alt: 'Image 2' },
     { src: 'images/css.png', alt: 'Image 3' },
-    { src: 'images/Nodejs.png', alt: 'Image 4' },
+    { src: 'images/NodeLogo.jpg', alt: 'Image 4' },
     { src: 'images/React logo.png', alt: 'Image 5' },
     { src: 'images/MongoDb.jpg', alt: 'Image 6' },
     { src: 'images/SSMS.jpg', alt: 'Image 7' },
