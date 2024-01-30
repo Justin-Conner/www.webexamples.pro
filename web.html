@@ -15,6 +15,21 @@
   <title>Bouncing Circles Animation</title>
 </head>
 <body>
+  <style>
+    #bouncingCanvas {
+        width: 100%; /* Make the canvas fill the container */
+        max-width: 100vw; /* Limit the maximum width to the viewport width */
+        height: auto; /* Automatically adjust the height */
+        max-height: 70vh; /* Limit the maximum height to 70% of the viewport height */
+        display: block; /* Ensure the canvas behaves as a block element */
+        margin: 0 auto; /* Center the canvas horizontally */
+        border: 2px solid black; /* Add a border for better visibility */
+        border-radius: 10px; /* Add border radius for rounded corners */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add box shadow for depth */
+        background-color: black; /* Set background color */
+    }
+</style>
+
   <canvas id="bouncingCanvas" width="1800" height="350"></canvas>
 
   <script>

@@ -28,7 +28,6 @@ body {
     align-items: center; /* Center items along the cross-axis (vertically) */
     gap: 20px;
     margin-right: 70px;
-    background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
@@ -36,26 +35,18 @@ body {
     width: 100%;
     background-color: transparent;
     text-align: center;
-    padding-top: 80px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    
+    background-color: white;
     align-items: center;
+    z-index: -1; /* Add a higher z-index to keep it above other elements */
+    position: relative; /* Use position relative to control the stacking context */
+    padding: 20px; /* Add padding to avoid covering up other elements */
 }
 
 
-.span {
-    width: 100%;
-    background-color: transparent;
-    text-align: center;
-    padding-top: 80px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-}
+
+
 
 #typing-container {
     align-items: center;
