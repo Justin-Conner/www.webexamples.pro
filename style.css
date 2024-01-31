@@ -6,13 +6,10 @@
 
 .carousel-wrapper {
     display: flex;
-<<<<<<< HEAD
     width: 100%;
     transition: transform 0.5s ease; /* Smooth transition for scrolling */
-=======
 
     transition: transform 1s ease; /* Smooth transition for scrolling */
->>>>>>> master
     background-color: white;
 
 }
