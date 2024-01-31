@@ -30,7 +30,7 @@
     /* Remove the background-image property */
     background-size: cover; /* Adjust background size as needed */
     background-position: center; /* Center the background image */
-    background-color: rgb(134, 134, 134); /* Set text color to white for better visibility */
+    background-color: black; /* Set text color to white for better visibility */
     padding: 20px; /* Add some padding for better readability */
     margin: 25px;
     border-radius: 10px;
