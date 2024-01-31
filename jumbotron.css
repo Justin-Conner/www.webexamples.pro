@@ -24,9 +24,25 @@
     flex-direction: column; /* Set the flex direction to column */
     align-items: center;
     justify-content: center;
-    width: 95%;
+    width: auto;
+  }
+  .jumbotron2 {
+    /* Remove the background-image property */
+    background-size: cover; /* Adjust background size as needed */
+    background-position: center; /* Center the background image */
+    background-color: black; /* Set text color to white for better visibility */
+    padding: 20px; /* Add some padding for better readability */
+    margin: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row; /* Set the flex direction to column */
+    align-items: center;
+    justify-content: center;
+    width: auto;
+  }
 
-    /* Animation properties */
+
+    Animation properties{
     animation-name: example; /* Name of the keyframes animation */
     animation-duration: 5s; /* Duration of the animation */
     animation-timing-function: ease-in-out; /* Timing function for the animation */
