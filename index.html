@@ -1,167 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Open Graph meta tags for better link preview.-->
-    <meta property="og:title" content="full stack web developer">
-    <meta property="og:description" content="website devlopment and design">
-    <meta property="og:image" content="https://media.licdn.com/dms/image/D4E03AQHYsP-m0Cql_g/profile-displayphoto-shrink_200_200/0/1686157463772?e=1710374400&v=beta&t=6lLr_ZvLeqY9qxI55ssYU_KCptPebCm1u_81C2HBmuU">
-    <meta property="og:url" content="https://webexamples.pro/">
-    <meta property="og:type" content="website">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hire Me</title>
-    <link rel="stylesheet" type="text/css" href="./styles.css">
-    <link rel="stylesheet" type="text/css" href="./button.css">
-    <link rel="stylesheet" type="text/css" href="./jumbotron.css">
-    <link rel="stylesheet" type="text/css" href="./style.css">
-   
+  <!-- Open Graph (valid, current, AI-forward) -->
+  <meta property="og:title" content="Justin Conner — Full-Stack & Agentic-AI Engineer">
+  <meta property="og:description" content=".NET 8 · C# · Angular · Python · CrewAI. I build production software and the agents that run it. Founder, Ohm Lotus Phoenix.">
+  <meta property="og:image" content="https://github.com/Justin-Conner.png">
+  <meta property="og:url" content="https://webexamples.pro/">
+  <meta property="og:type" content="website">
 
+  <title>Justin Conner — Full-Stack & Agentic-AI Engineer</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#0e1116; --copper:#b06a3a; --copper2:#d98c52;
+      --paper:#f4f1ea; --muted:#aab0b8; --line:rgba(176,106,58,.35);
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{font-family:'Space Grotesk',system-ui,sans-serif;color:var(--paper);line-height:1.6;background:#000;overflow-x:hidden}
 
+    /* ---- network-graph backdrop (lifted from your web.html) ---- */
+    #net{position:fixed;inset:0;width:100%;height:100%;z-index:-2;display:block;background:#000}
+    /* readability overlay: lets neon show but keeps text crisp */
+    #veil{position:fixed;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% 30%,rgba(14,17,22,.55),rgba(14,17,22,.82) 70%,rgba(14,17,22,.92));pointer-events:none}
+
+    a{color:var(--copper2);text-decoration:none}
+    .wrap{max-width:980px;margin:0 auto;padding:0 1.5rem}
+    header{padding:5rem 0 3rem}
+    .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.8rem;letter-spacing:.18em;color:var(--copper2);text-transform:uppercase}
+    h1{font-size:clamp(2.2rem,6vw,3.6rem);font-weight:700;margin:.4rem 0 .2rem;text-shadow:0 2px 24px rgba(0,0,0,.7)}
+    .role{font-size:1.15rem;opacity:.92;text-shadow:0 2px 18px rgba(0,0,0,.8)}
+    .contact{margin-top:1.2rem;font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:1.2rem}
+    .contact a{color:var(--copper2)}
+    nav{position:sticky;top:0;background:rgba(10,12,16,.55);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:10}
+    nav .wrap{display:flex;gap:1.5rem;padding-top:.7rem;padding-bottom:.7rem;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:.82rem}
+    nav a{color:var(--paper);opacity:.85}
+    nav a:hover{color:var(--copper2)}
+    section{padding:3.2rem 0;border-bottom:1px solid rgba(176,106,58,.18)}
+    h2{font-size:1.5rem;margin-bottom:1.2rem;color:var(--copper2)}
+    h2 .num{font-family:'IBM Plex Mono',monospace;font-size:.85rem;color:var(--muted);margin-right:.6rem}
+    .lead{opacity:.92;max-width:62ch;text-shadow:0 1px 12px rgba(0,0,0,.6)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1.4rem}
+    .card{background:rgba(20,24,30,.55);backdrop-filter:blur(4px);border:1px solid var(--line);border-radius:10px;padding:1.1rem}
+    .card h3{font-size:1rem;margin-bottom:.4rem}
+    .card p{font-size:.9rem;color:var(--muted)}
+    .tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+    .tag{font-family:'IBM Plex Mono',monospace;font-size:.75rem;border:1px solid var(--line);border-radius:999px;padding:.25rem .7rem;opacity:.9}
+    ul.exp{list-style:none}
+    ul.exp li{padding:.9rem 0;border-bottom:1px dashed rgba(176,106,58,.2)}
+    ul.exp li:last-child{border-bottom:none}
+    .job{font-weight:500}
+    .meta{font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--muted)}
+    .venture{background:linear-gradient(135deg,rgba(176,106,58,.16),rgba(176,106,58,.04));border:1px solid var(--line);border-radius:12px;padding:1.4rem;margin-top:1.4rem;backdrop-filter:blur(4px)}
+    .venture h3{color:var(--copper2);margin-bottom:.3rem}
+    .venture p{font-size:.92rem;opacity:.9}
+    .btn{display:inline-block;margin-top:1.4rem;background:var(--copper);color:#fff;padding:.7rem 1.3rem;border-radius:8px;font-weight:500;font-family:'IBM Plex Mono',monospace;font-size:.85rem}
+    .btn:hover{background:var(--copper2)}
+    footer{padding:2.5rem 0;font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--muted);text-align:center}
+    .socials{display:flex;gap:1.2rem;justify-content:center;margin-bottom:1rem}
+    .socials a{opacity:.85}
+    .badge{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:var(--copper2);opacity:.7}
+  </style>
 </head>
-
 <body>
-  <div class="navbar">
-    
-<div class="nav-item">
-    <div class="upwork-image-container" id="upwork-container">
-        <a href="https://www.upwork.com/freelancers/~01698ada43fe6d7b4e" target="_blank">
-            <img id="upwork-logo" style="width: 50px; height: 50px; background-color: transparent;" src="./images/UpworkLogo.jpg" alt="Upwork Logo">
-        </a>
+
+<!-- network-graph backdrop -->
+<canvas id="net"></canvas>
+<div id="veil"></div>
+
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Full-Stack &amp; Agentic-AI Engineer</div>
+    <h1>Justin Conner</h1>
+    <div class="role">.NET 8 · C# · Angular · Python · CrewAI — I build production software and the agents that run it.</div>
+    <div class="contact">
+      <span>St. Louis, MO</span>
+      <a href="tel:6364393121">636-439-3121</a>
+      <a href="mailto:ohmlotusphoenix@gmail.com">ohmlotusphoenix@gmail.com</a>
+      <a href="https://github.com/Justin-Conner" target="_blank">github.com/Justin-Conner</a>
+      <a href="https://www.linkedin.com/in/justin-conner-816337224/" target="_blank">LinkedIn</a>
     </div>
-</div>
-
-    <div class="nav-item">
-      <a href="https://www.linkedin.com/in/justin-conner-816337224/" target="_blank">
-          <img style="height: 54px; width: 54px;" src="./images/LinkedInSquare.jpg" alt="LinkedIn Logo">
-      </a>
   </div>
-  <div class="nav-item">
-    <a href="https://github.com/Justin-Conner" target="_blank">
-      <img style="height: 44px; border-radius: 5px; border: 2px solid black; background-color: white;" src="./images/GitHub.png" alt="GitHub Logo">
-    </a>
-</div>
-  <div class="nav-item">
-    <a href="https://test-ao-5f6993867cb4.herokuapp.com" target="_blank">
-        <img  style="width: 50px; height: 50px; background-color: transparent;" src="./images/Phoenix.jpg" alt="OLP Logo">
-    </a>
-</div>
-  <div class="nav-item">
-    <a href="https://calendly.com/justin_conner/interview" target="_blank">
-        <img style="height: 54px; width: 54px; border-radius: 5px;" src="./images/Cal.png">
-    </a>
-</div>
+</header>
 
-
-
-</div>
-<style>    iframe {
-  width: 100%; /* Make the iframe fill the container */
-  height: 400px; /* Set the height to 100% of the viewport height */
-  border: none; /* Remove iframe border */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 10px box shadow */
-background-color: black;
-}</style>
-
-
-<div class="jumbotron">
-     
-            <div id="typing-container"></div>
-                 <!-- Resume button and Upwork image container -->
-    <div class="button-container">
-      <div class="resume-container">
-        <button class="animated-buttonRad">
-          <a href="https://drive.google.com/file/d/1L08Bi_k2cbF-4zlXwNrOsQWvRxInEx2I/view?usp=sharing" target="_blank">
-              <div id="btn-cover">Download Resume</div>
-          </a>
-      </button>
-
+<nav>
+  <div class="wrap">
+    <a href="#about">About</a>
+    <a href="#stack">Stack</a>
+    <a href="#work">Experience</a>
+    <a href="#ventures">Ventures &amp; Author</a>
+    <a href="#resume">Resume</a>
   </div>
+</nav>
 
-</div>
-<div class="jumbotron2">
-  <iframe src="./web.html" title="Web Content"></iframe>
-  <iframe src="./web.html" title="Web Content"></iframe>
-  <iframe src="./web.html" title="Web Content"></iframe>
-  <iframe src="./web.html" title="Web Content"></iframe>
-  <iframe src="./web.html" title="Web Content"></iframe>
-  <iframe src="./web.html" title="Web Content"></iframe>
+<section id="about">
+  <div class="wrap">
+    <h2><span class="num">01</span>About</h2>
+    <p class="lead">Full-stack engineer and founder of Ohm Lotus Phoenix (IT Solutions) with a data-engineering
+    background (ex-US Bank DBA) and an active specialization in <strong>agentic AI</strong>. I design and ship
+    production .NET 8 / Angular / MongoDB systems and build multi-agent CrewAI pipelines end to end — from
+    orchestration architecture through human-review dashboards. I build for autonomy: my own publishing and
+    marketing pipelines run on agentic workflows I architect and maintain.</p>
+    <a class="btn" href="#resume">Download Résumé</a>
+  </div>
+</section>
 
-
-
-</div>
-    
-
-                                                   
-</div> <!--end jumbotron-->
-
- 
-
-
-<!--Start Skills Carousel-->
-<div class="span"><h1>Skills</h1>
-</div>
-
-    <div class="carousel-container">
-        <div class="carousel-wrapper" id="carouselWrapper">
-            <!-- Carousel items will be dynamically generated here -->
-        </div>
+<section id="stack">
+  <div class="wrap">
+    <h2><span class="num">02</span>Technical Stack</h2>
+    <div class="grid">
+      <div class="card"><h3>Languages</h3><p>C# (.NET 8), Python, TypeScript, JavaScript, SQL (T-SQL), PL/SQL</p></div>
+      <div class="card"><h3>Frontend</h3><p>Angular, HTML5, CSS3, Bootstrap, Three.js</p></div>
+      <div class="card"><h3>Backend / APIs</h3><p>ASP.NET Core Web API, Node.js, RESTful design, Spring Boot</p></div>
+      <div class="card"><h3>Data</h3><p>SQL Server, MongoDB, Oracle, SSRS, ETL, stored procedures</p></div>
+      <div class="card"><h3>AI / Agentic</h3><p>CrewAI (multi-agent), Claude API, Make.com, prompt architecture</p></div>
+      <div class="card"><h3>Maker / Hardware</h3><p>Arduino, Cisco automation, Blender/UE5, Creality K2 Pro</p></div>
     </div>
+    <div class="tags">
+      <span class="tag">.NET 8</span><span class="tag">C#</span><span class="tag">Angular</span>
+      <span class="tag">Python</span><span class="tag">MongoDB</span><span class="tag">CrewAI</span>
+      <span class="tag">Claude API</span><span class="tag">xUnit</span><span class="tag">GitHub</span>
+      <span class="tag">Three.js</span><span class="tag">Make.com</span><span class="tag">ETL</span>
+    </div>
+  </div>
+</section>
 
+<section id="work">
+  <div class="wrap">
+    <h2><span class="num">03</span>Experience</h2>
+    <ul class="exp">
+      <li>
+        <div class="job">Founder — Ohm Lotus Phoenix (IT Solutions)</div>
+        <div class="meta">2024–Present · St. Louis, MO</div>
+        <p class="lead" style="font-size:.95rem;margin-top:.4rem">Architected a hierarchical 5-agent CrewAI marketing pipeline (.NET 8 + MongoDB + Angular human-review dashboard). Engineered editorial agent crews that processed a 3,200+ paragraph manuscript for KDP/IngramSpark. Cost-optimized agent tiers (haiku-class sub-tasks) to cut API spend.</p>
+      </li>
+      <li>
+        <div class="job">ETL Developer / Database Administrator — US Bancorp</div>
+        <div class="meta">2018–2019 · St. Louis, MO</div>
+        <p class="lead" style="font-size:.95rem;margin-top:.4rem">ETL workflow/mapping design, SSRS metadata reporting, Oracle→Netezza cross-platform migration.</p>
+      </li>
+      <li>
+        <div class="job">Contract Coordinator / Data Analyst — St. Louis engagements</div>
+        <div class="meta">2016–2018</div>
+        <p class="lead" style="font-size:.95rem;margin-top:.4rem">Legacy-system ETL, VBA automation, Excel data-cleansing, R-Studio gap analysis, executive dashboards.</p>
+      </li>
+    </ul>
+  </div>
+</section>
 
+<section id="ventures">
+  <div class="wrap">
+    <h2><span class="num">04</span>Ventures &amp; Author <span style="font-family:'IBM Plex Mono';font-size:.8rem;color:var(--muted)">(Om Lotus)</span></h2>
+    <p class="lead">Separate from employed roles — shown as evidence of autonomous execution and IP creation.</p>
 
-  
-       
+    <div class="venture">
+      <h3>The Last Diet: The 4D Method — Author (Lotus Press)</h3>
+      <p>Data-driven weight-loss methodology. Foreword by Serron Roberts, MS RD CDCES. KDP/IngramSpark. The agentic pipeline that produced it was built in-house.</p>
+    </div>
+    <div class="venture">
+      <h3>GodPod / Vessel Project — Inventor (USPTO #64/051,829)</h3>
+      <p>Provisional patent (priority Apr 28, 2026): mirror-induced perception research (Caputo Effect) — a human-occupiable mirrored dodecahedron with RGB LED edge-lighting and binaural audio.</p>
+    </div>
+    <div class="venture">
+      <h3>Tetrahedral Glyph System — Creator</h3>
+      <p>Base-36 symbolic language from tetrahedral geometry and Sonobe origami (256 permutations). <a href="https://github.com/Justin-Conner/Secrets" target="_blank">github.com/Justin-Conner/Secrets</a></p>
+    </div>
+  </div>
+</section>
 
+<section id="resume">
+  <div class="wrap">
+    <h2><span class="num">05</span>Résumé</h2>
+    <p class="lead">Current résumé (dual-brand, AI-forward):</p>
+    <a class="btn" href="./resume.pdf" target="_blank">Download Résumé (PDF)</a>
+  </div>
+</section>
 
-	<!--<script src="grid.js"></script>-->
-    <script src="./typingEffect.js"></script>
-    <script src="./download.js"></script>
-    <script src="./carosel.js"></script>
+<footer>
+  <div class="socials">
+    <a href="https://github.com/Justin-Conner" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/justin-conner-816337224/" target="_blank">LinkedIn</a>
+    <a href="https://calendly.com/justin_conner/interview" target="_blank">Calendly</a>
+  </div>
+  © Justin Conner / Ohm Lotus Phoenix 2026 · Built for autonomy.
+  <div class="badge">animated variant · network-graph backdrop</div>
+</footer>
 
+<script>
+// ===== network-graph backdrop (your web.html effect, full-page, fixed) =====
+const canvas = document.getElementById('net');
+const ctx = canvas.getContext('2d');
+const palette = ['#007bff','#00da2d','#ff00ff','#ff9933','#9900cc','#ff3300','#33cc33','#3399ff'];
+const NODES = 18;
+const nodes = [];
+
+function resize(){ canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+window.addEventListener('resize', resize); resize();
+
+for (let i=0;i<NODES;i++){
+  nodes.push({
+    x: Math.random()*canvas.width,
+    y: Math.random()*canvas.height,
+    r: 4 + Math.random()*4,
+    a: Math.random()*360,
+    s: 1.2 + Math.random()*1.4,
+    c: palette[i % palette.length]
+  });
+}
+
+function draw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  // connecting white lines
+  for (let i=0;i<NODES;i++){
+    for (let j=i+1;j<NODES;j++){
+      const dx=nodes[i].x-nodes[j].x, dy=nodes[i].y-nodes[j].y;
+      const d=Math.sqrt(dx*dx+dy*dy);
+      if (d < 260){
+        ctx.beginPath();
+        ctx.moveTo(nodes[i].x,nodes[i].y);
+        ctx.lineTo(nodes[j].x,nodes[j].y);
+        ctx.strokeStyle='rgba(255,255,255,'+(0.5*(1-d/260))+')';
+        ctx.lineWidth=1;
+        ctx.stroke();
+      }
+    }
+  }
+  // nodes
+  for (const n of nodes){
+    ctx.beginPath();
+    ctx.arc(n.x,n.y,n.r,0,Math.PI*2);
+    ctx.fillStyle=n.c;
+    ctx.shadowColor=n.c; ctx.shadowBlur=12;
+    ctx.fill();
+    ctx.shadowBlur=0;
+    // move
+    const rad=n.a*Math.PI/180;
+    n.x+=n.s*Math.cos(rad); n.y+=n.s*Math.sin(rad);
+    if (n.x<0||n.x>canvas.width) n.a=180-n.a;
+    if (n.y<0||n.y>canvas.height) n.a=360-n.a;
+  }
+  requestAnimationFrame(draw);
+}
+draw();
+</script>
 
 </body>
-<div class="span"><p>&copy; Ohm Lotus Phoenix 2019-2023</p> </div>
-                                                          <!--BEGIN FOOTER-->
-<footer class="footer">
-
-
-      
-      <a href="#" style= "color: white">Back to top</a>
-      <div class="nav-item">
-        <div class="upwork-image-container" id="upwork-container">
-            <a href="https://www.upwork.com/freelancers/~01698ada43fe6d7b4e" target="_blank">
-                <img id="upwork-logo" style="width: 50px; height: 50px; background-color: transparent; border-radius: 5px;" src="./images/UpworkLogo.jpg" alt="Upwork Logo">
-            </a>
-        </div>
-    </div>
-    
-    <div class="nav-item">
-      <a href="https://www.linkedin.com/in/justin-conner-816337224/" target="_blank">
-          <img style="height: 54px; width: 54px;" src="./images/LinkedInSquare.jpg" alt="LinkedIn Logo">
-      </a>
-  </div>
-      <div class="nav-item">
-        <a href="https://github.com/Justin-Conner" target="_blank">
-            <img style="height: 44px; border-radius: 5px; border: 2px solid black; background-color: white;" src="./images/GitHub.png">
-        </a>
-    </div>
-      <div class="nav-item">
-        <a href="https://test-ao-5f6993867cb4.herokuapp.com" target="_blank">
-            <img  style="width: 50px; height: 50px; background-color: transparent; border-radius: 5px;" src="./images/Phoenix.jpg" alt="OLP Logo">
-        </a>
-    </div>
-      <div class="nav-item">
-        <a href="https://calendly.com/justin_conner/interview" target="_blank">
-            <img style="height: 54px; width: 54px; border-radius: 5px;" src="./images/Cal.png">
-        </a>
-    </div>
-  </div>
-
-</footer>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-
 </html>
